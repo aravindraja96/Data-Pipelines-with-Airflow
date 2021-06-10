@@ -30,4 +30,4 @@ First We need to install Airflow . To do so, run pip install airflow
 * Turning on the sparkify_music_dwh_dag DAG in Airflow UI will automatically trigger the ETL pipelines to run.
 * DAG is as such (from graph view):
 
-![DAG](snapshots/dag.PNG)
+![DAG](snapshots/DAG.PNG)
