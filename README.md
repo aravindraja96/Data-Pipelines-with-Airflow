@@ -1,13 +1,16 @@
 ### Introduction
+---
 A music streaming company, Sparkify, has decided that it is time to introduce more automation and monitoring to their data warehouse ETL pipelines and come to the conclusion that the best tool to achieve this is Apache Airflow.
 They have decided to bring you into the project and expect you to create high grade data pipelines that are dynamic and built from reusable tasks, can be monitored, and allow easy backfills. They have also noted that the data quality plays a big part when analyses are executed on top the data warehouse and want to run tests against their datasets after the ETL steps have been executed to catch any discrepancies in the datasets.
 The source data resides in S3 and needs to be processed in Sparkify's data warehouse in Amazon Redshift. The source datasets consist of JSON logs that tell about user activity in the application and JSON metadata about the songs the users listen to.
 
 ### Project Overview
+---
 This repo provides the ETL pipeline, to ingest sparkify's music data into an AWS Redshift Data Warehouse. The ETL pipeline will be run on an hourly basis, scheduled using Airflow.
 
 
 ### Dependencies
+---
 First We need to install Airflow . To do so, run pip install airflow
 
 * Run: airflow webserver -p 8080. Refer to https://airflow.apache.org/docs/stable/start.html for more details on how to get started,
@@ -17,6 +20,7 @@ First We need to install Airflow . To do so, run pip install airflow
 * Configure redshift connection in Airflow (under Airflow UI >> Admin >> Connections)
 
 ### Database Design and ETL Pipeline
+---
 * For the schema design, the STAR schema is used as it simplifies queries and provides fast aggregations of data.
 
 * For the ETL pipeline, Python is used as it contains libraries such as pandas, that simplifies data manipulation. It enables reading of files from S3.
